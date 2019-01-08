@@ -1,9 +1,9 @@
 
 
-https://stackoverflow.com/questions/50386844/the-connection-to-the-server-10-0-x-x6443-was-refused-after-restarting-the-vm-w
-
 
 ## Issue: The connection to the server 10.0.x.x:6443 was refused after restarting the VM where kubernetes master was installed using kubeadm
+
+https://stackoverflow.com/questions/50386844/the-connection-to-the-server-10-0-x-x6443-was-refused-after-restarting-the-vm-w
 
 
 UPDATE:
