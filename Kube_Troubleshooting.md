@@ -25,3 +25,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 ```
 If it starts normally, then you need to make sure that KUBECONFIG environment variable is properly configured upon restart either adding it to .bashrc or similar...
 
+Then: 
+```
+source ~/.bashrc
+```
