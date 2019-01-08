@@ -13,6 +13,25 @@ Service accounts for the controller and speaker, along with the RBAC permissions
 The installation manifest does not include a configuration file. MetalLB’s components will still start, but will remain idle until you define and deploy a configmap.
 
 
+metallb-configmap.yaml:
+```
+metadata:
+  namespace: metallb-system
+  name: config
+data:
+  config: |
+    address-pools:
+    - name: default
+      protocol: layer2
+      addresses:
+      - <NODE MIN IP>-<NODE MAX IP>
+```
+
+
+```
+kubectl appply -f metallb-configmap.yaml
+```
+
 
 ## Setup ingress:
 
