@@ -1,4 +1,4 @@
-
+```
 1.) Deployment
 kubectl run flaskexample --image=macinv/flask-example --port 8080
 
@@ -7,7 +7,7 @@ kubectl run flaskexample --image=macinv/flask-example --port 8080
 
 kubectl expose deployment flaskexample --port=8080 --target-port=8000
 kubectl expose pod f-app --port=8080 --name=f-svc
-
+```
 Examples:
   # Create a service for a replicated nginx, which serves on port 80 and connects to the containers on port 8000.
   kubectl expose rc nginx --port=80 --target-port=8000
@@ -45,7 +45,7 @@ https://medium.com/@schogini/ingress-controller-and-kubernetes-using-minikube-a-
   
   
   
-
+```
   apiVersion: v1
 kind: Pod
 metadata:
@@ -98,4 +98,4 @@ spec:
         backend:
           serviceName: fs-2-svc
           servicePort: 80  
-  
+  ```
