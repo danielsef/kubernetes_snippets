@@ -46,7 +46,7 @@ https://medium.com/@schogini/ingress-controller-and-kubernetes-using-minikube-a-
   
   
 ```
-  apiVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: fs-2
@@ -84,7 +84,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   namespace: default
-  name: ifs-2-ing
+  name: fs-2-ing
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
