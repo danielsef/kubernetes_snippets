@@ -45,4 +45,57 @@ https://medium.com/@schogini/ingress-controller-and-kubernetes-using-minikube-a-
   
   
   
+
+  apiVersion: v1
+kind: Pod
+metadata:
+  name: fs-2
+  namespace: default
+  labels:
+    app: flaskexample
+spec:
+  containers:
+  - name: fl1
+    image: macinv/flask-example
+    imagePullPolicy: IfNotPresent
+    ports:
+    - name: http
+      containerPort: 8080
+
+
+-----------------------------------
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: default
+  name: fs-2-svc
+spec:
+  selector:
+    app: flaskexample
+  ports:
+  - port: 80
+    targetPort: http
+  type: NodePort      
+
+------------------------------------
+
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  namespace: default
+  name: ifs-2-ing
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: fs-2-svc
+    servicePort: 80
+  rules:
+  - http:
+      paths:
+      - path: /fs2
+        backend:
+          serviceName: fs-2-svc
+          servicePort: 80  
   
