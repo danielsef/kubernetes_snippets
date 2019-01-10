@@ -34,8 +34,13 @@ Examples:
   
   3.) Ingress
   
-  https://medium.com/@Oskarr3/setting-up-ingress-on-minikube-6ae825e98f82
+https://medium.com/@Oskarr3/setting-up-ingress-on-minikube-6ae825e98f82
+  
   https://gist.githubusercontent.com/0sc/77d8925cc378c9a6a92890e7c08937ca/raw/84ceff5f03da4a2d0a4d2afabd30a1cf3d61fbd1/ingress-tutorial.yaml
+  
+  
+https://medium.com/@schogini/ingress-controller-and-kubernetes-using-minikube-a-tiny-demonstration-63c2a73e2803
+  
   
   
   
