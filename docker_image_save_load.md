@@ -7,10 +7,6 @@ docker image save -o alpine.tar alpine:latest
 
 ######################################## LOAD IMAGE #######################################
 
-$ docker images
-
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-
 $ ls
 alpine.tar
 
