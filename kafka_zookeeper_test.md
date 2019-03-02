@@ -2,11 +2,11 @@
 
 docker run -d --name=zookeeper1 -p 2181:2181 -e ZOOKEEPER_CLIENT_PORT=2181 confluentinc/cp-zookeeper:5.1.0;
 
-docker run -d --name=kafka1 -p 9092:9092 \
--v /data/docker/logs:/var/lib/kafka/data:rw \
--e KAFKA_ZOOKEEPER_CONNECT=<HOSTNAME>:2181 \
--e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://<HOSTNAME>:9092 \
--e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \
+docker run -d --name=kafka1 -p 9092:9092 \\
+-v /tmp/kafka/logs:/var/lib/kafka/data:rw \\
+-e KAFKA_ZOOKEEPER_CONNECT=127.0.0.1:2181 \\
+-e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092 \\
+-e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \\
 confluentinc/cp-kafka:5.1.0;
  
 sudo iptables -I INPUT -p tcp --dport 2181 -j ACCEPT
